@@ -37,19 +37,20 @@ export const Button = ({
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    // <button
-    //   type="button"
-    //   className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-    //   {...props}
-    // >
-    //   {label}
-    //   <style jsx>{`
-    //     button {
-    //       background-color: ${backgroundColor};
-    //     }
-    //   `}</style>
-    // </button>
-    <ButtonX title={label} onClick={props.onClick} label={label}/>
+    <button
+      type="button"
+      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      {...props}
+    >
+      {label}
+      <style jsx>{`
+        button {
+          background-color: ${backgroundColor};
+        }
+      `}</style>
+    </button>
+    // you can use the ButtonX component instead of the button element, need to fix the props
+    // <ButtonX title={label} onClick={props.onClick} label={label}/>
 
   );
 };
